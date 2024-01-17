@@ -7,7 +7,7 @@ import imageThree from "../../public/layanan/Keluarga Berencana (KB).png";
 import imageFour from "../../public/layanan/Info Antrian KIR.png";
 import imageFive from "../../public/layanan/Antrian Puskesmas.png";
 import imageSix from "../../public/layanan/Konsultasi Belajar Siswa (KBS).png";
-import imageSeven from "../../public/layanan/e-katalog.png";
+// import imageSeven from "../../public/layanan/e-katalog.png";
 import imageEight from "../../public/layanan/Event Wisata.png";
 import imageNine from "../../public/layanan/JSS Chat Asisten.png";
 import imageTen from "../../public/layanan/e-Sewa.png";
