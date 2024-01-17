@@ -7,7 +7,7 @@ import imageThree from "../../public/layanan/Keluarga Berencana (KB).png";
 import imageFour from "../../public/layanan/Info Antrian KIR.png";
 import imageFive from "../../public/layanan/Antrian Puskesmas.png";
 import imageSix from "../../public/layanan/Konsultasi Belajar Siswa (KBS).png";
-// import imageSeven from "../../public/layanan/e-katalog.png";
+import imageSeven from "../../public/layanan/E-Kat.png";
 import imageEight from "../../public/layanan/Event Wisata.png";
 import imageNine from "../../public/layanan/JSS Chat Asisten.png";
 import imageTen from "../../public/layanan/e-Sewa.png";
@@ -122,56 +122,52 @@ export default function Layanan() {
   ];
   return (
     <>
-    <Navbar/>
-  <section>
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8 mt-10">
-          <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-90">
-            Layanan Jogja Smart Service
-          </h2>
-          <p className="font-light text-gray-900 sm:text-xl dark:text-gray-400">
-            Kumpulan Layanan Penunjang JSS
-          </p>
-        </div>
-        <div className="grid gap-8 lg:grid-cols-4">
-          {layanan.map((l) => (
-            <article
-              key={l.id}
-              class="p-3 rounded-lg border border-slate-400 hover:shadow-2xl"
+      <Navbar />
+      <section>
+        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8 mt-10">
+            <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-90">
+              Layanan Jogja Smart Service
+            </h2>
+            <p className="font-light text-gray-900 sm:text-xl dark:text-gray-400">
+              Kumpulan Layanan Penunjang JSS
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-4">
+            {layanan.map((l) => (
+              <article key={l.id} class="p-3 rounded-lg border border-slate-400 hover:shadow-2xl">
+                <div className="flex items-center flex-col justify-center">
+                  <Image src={l.img} alt="" width={75} className="mb-5" />
+                  <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">
+                    <a href={l.url}>{l.title}</a>
+                  </h2>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="flex justify-end mt-5">
+            <Link
+              href="https://jss.jogjakota.go.id/v5/aplikasi/tree"
+              className="inline-flex items-center font-medium text-primary-600 dark:text-green-700 hover:underline"
             >
-              <div className="flex items-center flex-col justify-center">
-                <Image src={l.img} alt="" width={75} className="mb-5" />
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">
-                  <a href={l.url}>{l.title}</a>
-                </h2>
-              </div>
-            </article>
-          ))}
+              Lihat Layanan
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </Link>
+          </div>
         </div>
-        <div className="flex justify-end mt-5">
-          <Link
-            href="https://jss.jogjakota.go.id/v5/aplikasi/tree"
-            className="inline-flex items-center font-medium text-primary-600 dark:text-green-700 hover:underline"
-          >
-            Lihat Layanan
-            <svg
-              className="ml-2 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </section>
-    <Footer/>
+      </section>
+      <Footer />
     </>
-  
   );
 }
