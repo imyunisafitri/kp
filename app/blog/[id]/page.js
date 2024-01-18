@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
-import { FacebookShareButton, FacebookIcon } from "next-share";
+import { FacebookShareButton, FacebookIcon, InstagramShareButton, InstagramIcon } from "next-share";
 
 const BlogPost = ({ params }) => {
   const router = useRouter();
@@ -73,11 +73,18 @@ const BlogPost = ({ params }) => {
           {/* Facebook Share Button */}
           <FacebookShareButton
             url={`https://kp-steel.vercel.app/blog/${params.id}`}
-            quote={"next-share is a social share buttons for your next React apps."}
-            hashtag={"#nextshare"}
+            quote={"Baca Artikel Selanjutnya."}
+            hashtag={"#blogjss"}
           >
             <FacebookIcon size={32} round />
           </FacebookShareButton>
+          <InstagramShareButton
+            url={`https://kp-steel.vercel.app/blog/${params.id}`}
+            quote={"next-share is a social share buttons for your next React apps."}
+            hashtag={"#blogjss"}
+          >
+            <InstagramIcon size={32} round />
+          </InstagramShareButton>
         </div>
 
         <div className="mb-7 mt-7 flex justify-center">
