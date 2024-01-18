@@ -16,7 +16,7 @@ const BlogPost = ({ params }) => {
 
   useEffect(() => {
     async function fetchBlog() {
-      const res = await fetch(`http://localhost:3001/api/blogs/${params.id}`, {
+      const res = await fetch(`https://kp-steel.vercel.app/api/blogs/${params.id}`, {
         cache: "no-store",
       });
       const blog = await res.json();

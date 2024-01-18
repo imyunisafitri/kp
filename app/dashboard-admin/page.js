@@ -16,7 +16,7 @@ const Blog = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/posts");
+      const response = await fetch("https://kp-steel.vercel.app/api/posts");
       const data = await response.json();
       setPosts(data);
     } catch (error) {
@@ -26,7 +26,7 @@ const Blog = () => {
 
   const approvePost = async (id) => {
     try {
-      const response = await fetch("http://localhost:3001/api/blogs", {
+      const response = await fetch("https://kp-steel.vercel.app/api/blogs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const Blog = () => {
 
   const fetchBlog = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/blogs");
+      const response = await fetch("https://kp-steel.vercel.app/api/blogs");
       const blogg = await response.json();
       setBlog(blogg);
     } catch (error) {
