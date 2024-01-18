@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
-import { FacebookShareButton, FacebookIcon } from "next-share";
+import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from "next-share";
 
 const BlogPost = ({ params }) => {
   const router = useRouter();
@@ -78,6 +78,12 @@ const BlogPost = ({ params }) => {
           >
             <FacebookIcon size={32} round />
           </FacebookShareButton>
+          <TwitterShareButton
+            url={"https://kp-steel.vercel.app/blog/${params.id}"}
+            title={"Baca artikel selengkapnya link dibawah ini."}
+          >
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>
         </div>
 
         <div className="mb-7 mt-7 flex justify-center">
