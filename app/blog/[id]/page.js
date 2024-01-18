@@ -82,7 +82,7 @@ const BlogPost = ({ params }) => {
           </div>
           <dim className="pl-2">
             <TwitterShareButton
-              url={"https://kp-steel.vercel.app/blog/${params.id}"}
+              url={`https://kp-steel.vercel.app/blog/${params.id}`}
               title={"Baca artikel selengkapnya link dibawah ini."}
             >
               <TwitterIcon size={32} round />
