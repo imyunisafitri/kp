@@ -69,21 +69,25 @@ const BlogPost = ({ params }) => {
           {blog.content}
         </div>
         {/* Share buttons */}
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-8">
           {/* Facebook Share Button */}
-          <FacebookShareButton
-            url={`https://kp-steel.vercel.app/blog/${params.id}`}
-            quote={"Baca artikel selengkapnya link dibawah ini."}
-            hashtag={"#blogjss"}
-          >
-            <FacebookIcon size={32} round />
-          </FacebookShareButton>
-          <TwitterShareButton
-            url={"https://kp-steel.vercel.app/blog/${params.id}"}
-            title={"Baca artikel selengkapnya link dibawah ini."}
-          >
-            <TwitterIcon size={32} round />
-          </TwitterShareButton>
+          <div className="pl-2">
+            <FacebookShareButton
+              url={`https://kp-steel.vercel.app/blog/${params.id}`}
+              quote={"Baca artikel selengkapnya link dibawah ini."}
+              hashtag={"#blogjss"}
+            >
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+          </div>
+          <dim className="pl-2">
+            <TwitterShareButton
+              url={"https://kp-steel.vercel.app/blog/${params.id}"}
+              title={"Baca artikel selengkapnya link dibawah ini."}
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+          </dim>
         </div>
 
         <div className="mb-7 mt-7 flex justify-center">
