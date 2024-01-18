@@ -72,15 +72,12 @@ const BlogPost = ({ params }) => {
         <div className="flex justify-center mt-4">
           {/* Facebook Share Button */}
           <a
-            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              `https://https://kp-steel.vercel.app/blog/${params.id}`
-            )}`}
+            href={`https://www.facebook.com/sharer/sharer.php?u=https://kp-steel.vercel.app/blog/${params.id}`}
             target="_blank"
             rel="noopener noreferrer"
             className="mr-4 text-blue-600 dark:text-blue-500 hover:underline"
           >
             <FaFacebook size={24} />
-            Share on Facebook
           </a>
 
           {/* Instagram Share Button */}
@@ -93,7 +90,6 @@ const BlogPost = ({ params }) => {
             className="text-pink-600 dark:text-pink-500 hover:underline"
           >
             <FaInstagram size={24} />
-            Share on Instagram
           </a>
         </div>
 
