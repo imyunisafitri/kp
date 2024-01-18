@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const BlogPost = ({ params }) => {
   const router = useRouter();
@@ -67,6 +68,35 @@ const BlogPost = ({ params }) => {
         <div className="prose text-lg mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
           {blog.content}
         </div>
+        {/* Share buttons */}
+        <div className="flex justify-center mt-4">
+          {/* Facebook Share Button */}
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+              `https://https://kp-steel.vercel.app/blog/${params.id}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-4 text-blue-600 dark:text-blue-500 hover:underline"
+          >
+            <FaFacebook size={24} />
+            Share on Facebook
+          </a>
+
+          {/* Instagram Share Button */}
+          <a
+            href={`https://www.instagram.com/sharer.php?u=${encodeURIComponent(
+              `https://https://kp-steel.vercel.app/blog/${params.id}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-600 dark:text-pink-500 hover:underline"
+          >
+            <FaInstagram size={24} />
+            Share on Instagram
+          </a>
+        </div>
+
         <div className="mb-7 mt-7 flex justify-center">
           <Link
             href="/blog"
