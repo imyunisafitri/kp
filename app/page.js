@@ -24,7 +24,7 @@ export default function Home() {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/blogs`);
+      const response = await fetch(`https://kp-steel.vercel.app/api/blogs`);
       const data = await response.json();
       setPosts(data);
     } catch (error) {
