@@ -8,7 +8,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
-import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from "next-share";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  TelegramShareButton,
+  TelegramIcon,
+} from "next-share";
 
 const BlogPost = ({ params }) => {
   const router = useRouter();
@@ -80,14 +89,31 @@ const BlogPost = ({ params }) => {
               <FacebookIcon size={32} round />
             </FacebookShareButton>
           </div>
-          <dim className="pl-2">
+          <div className="pl-2">
             <TwitterShareButton
               url={`https://kp-steel.vercel.app/blog/${params.id}`}
               title={"Baca artikel selengkapnya link dibawah ini."}
             >
               <TwitterIcon size={32} round />
             </TwitterShareButton>
-          </dim>
+          </div>
+                <div className="pl-2">
+            <WhatsappShareButton
+              url={`http://localhost:3000/api/blogs/${params.id}`}
+              title={"Baca artikel selengkapnya link dibawah ini."}
+              separator=":: "
+            >
+              <WhatsappIcon size={32} round />
+            </WhatsappShareButton>
+          </div>
+          <div className="pl-2">
+            <TelegramShareButton
+              url={`http://localhost:3000/api/blogs/${params.id}`}
+              title={"Baca artikel selengkapnya link dibawah ini."}
+            >
+              <TelegramIcon size={32} round />
+            </TelegramShareButton>
+          </div>
         </div>
 
         <div className="mb-7 mt-7 flex justify-center">
