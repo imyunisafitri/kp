@@ -99,7 +99,7 @@ const BlogPost = ({ params }) => {
           </div>
                 <div className="pl-2">
             <WhatsappShareButton
-              url={`http://localhost:3000/api/blogs/${params.id}`}
+              url={`https://kp-steel.vercel.app/blog/${params.id}`}
               title={"Baca artikel selengkapnya link dibawah ini."}
               separator=":: "
             >
@@ -108,7 +108,7 @@ const BlogPost = ({ params }) => {
           </div>
           <div className="pl-2">
             <TelegramShareButton
-              url={`http://localhost:3000/api/blogs/${params.id}`}
+              url={`https://kp-steel.vercel.app/blog/${params.id}`}
               title={"Baca artikel selengkapnya link dibawah ini."}
             >
               <TelegramIcon size={32} round />
