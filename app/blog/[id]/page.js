@@ -116,11 +116,19 @@ const BlogPost = ({ params }) => {
           </div>
                 <div className="pl-2">
             <button
-              onClick={() =>
-                navigator.clipboard.writeText(`https://kp-steel.vercel.app/blog/${params.id}`)
-              }
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(
+                    `https://kp-steel.vercel.app/blog/${params.id}`
+                  );
+                  alert("Text copied to clipboard. Open Instagram and paste to share!");
+                } catch (error) {
+                  console.error("Failed to copy text:", error);
+                  // Handle potential errors (e.g., clipboard permissions not granted)
+                }
+              }}
             >
-              Copy to Share on Instagram
+              <FaInstagram size={32} color="red" />
             </button>
           </div>
         </div>
