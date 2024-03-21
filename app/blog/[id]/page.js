@@ -117,7 +117,7 @@ const BlogPost = ({ params }) => {
                 <div className="pl-2">
             <button
               onClick={() =>
-                navigator.clipboard.writeText(`https://kp-steel.vercel.app/${params.id}`)
+                navigator.clipboard.writeText(`https://kp-steel.vercel.app/blog/${params.id}`)
               }
             >
               Copy to Share on Instagram
