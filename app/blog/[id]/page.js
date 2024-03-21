@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
+import { FaInstagram } from "react-icons/fa";
 import {
   FacebookShareButton,
   FacebookIcon,
