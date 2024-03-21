@@ -114,6 +114,15 @@ const BlogPost = ({ params }) => {
               <TelegramIcon size={32} round />
             </TelegramShareButton>
           </div>
+                <div className="pl-2">
+            <button
+              onClick={() =>
+                navigator.clipboard.writeText(`https://kp-steel.vercel.app/${params.id}`)
+              }
+            >
+              Copy to Share on Instagram
+            </button>
+          </div>
         </div>
 
         <div className="mb-7 mt-7 flex justify-center">
